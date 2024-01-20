@@ -14,7 +14,7 @@ namespace WelcomeToUzbekistan
     {
         internal class Uzbekistan
         {
-            public List<Region> Regions { get; private set; } // Added Regions property
+            public List<Region> Regions { get; private set; }
 
             public async Task Run()
             {
@@ -26,7 +26,7 @@ namespace WelcomeToUzbekistan
 
                 string content = await response.Content.ReadAsStringAsync();
                 var result = JsonConvert.DeserializeObject<RegionsData>(content);
-                Regions = result.Data; // Assign regions to the Regions property
+                Regions = result.Data;
 
                 foreach (var region in Regions)
                 {
