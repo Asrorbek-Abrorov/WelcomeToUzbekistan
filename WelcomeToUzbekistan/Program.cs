@@ -14,6 +14,7 @@ namespace WelcomeToUzbekistan
     {
         static async Task Main()
         {
+            Console.Title = "Asrorbek";
             var uzbekistan = new Uzbekistan();
             await uzbekistan.Run();
 
